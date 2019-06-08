@@ -2,25 +2,26 @@
 
 ## OS requirements: Ubuntu Centos Debian
 
-## install git
+## Install git
 apt install git -y<br>
 
 yum install git -y<br>
 
 
-## clone this bash script
+## Clone this bash script
 git clone https://github.com/abbrous/openvpn-install
 
-## change directory, switch to root account, add executable permission
+## Change into directory, switch to root account, add executable permission
 cd openvpn-install<br>
 chmod a+x openvpn-install.sh<br>
 ./openvpn-install.sh<br>
 
-## close firewall, or permit port 9090(anything you want), e.g systemctl stop firewalld
-## server xxx.ovpn file, open your browser and download
+## Stop firewall, or permit port 9090(anything you want), e.g systemctl stop firewalld
+## Serve xxx.ovpn file, open your browser and download
 python -m SimpleHTTPServer 9090<br>
 
-## download xxx.ovpn file, and import to you client
+
+## Download xxx.ovpn file, and import to you client
 
 MAC OS X client => Tunnelblick<br>
 Android Phone client => Openvpn for Android<br>
