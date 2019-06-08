@@ -1,18 +1,29 @@
-## openvpn-install
-OpenVPN [road warrior](http://en.wikipedia.org/wiki/Road_warrior_%28computing%29) installer for Debian, Ubuntu and CentOS.
+# One Click to Configure OpenVPN Server
 
-This script will let you setup your own VPN server in no more than a minute, even if you haven't used OpenVPN before. It has been designed to be as unobtrusive and universal as possible.
+## OS requirements: Ubuntu Centos Debian
 
-### Installation
-Run the script and follow the assistant:
+## install git
+apt install git -y
+yum install git -y
 
-`wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh`
+## clone this bash script
+git clone https://github.com/abbrous/openvpn-install
 
-Once it ends, you can run it again to add more users, remove some of them or even completely uninstall OpenVPN.
+## change directory, switch to root account, add executable permission
+cd openvpn-install
+chmod a+x openvpn-install.sh
+./openvpn-install.sh
 
-### I want to run my own VPN but don't have a server for that
-You can get a VPS from just $1/month at [VirMach](https://billing.virmach.com/aff.php?aff=4109&url=billing.virmach.com/cart.php?gid=1).
+## close firewall, or permit port 9090(anything you want), e.g systemctl stop firewalld
+## server xxx.ovpn file, open your browser and download
+python -m SimpleHTTPServer 9090
 
-### Donations
+## download xxx.ovpn file, and import to you client
 
-If you want to show your appreciation, you can donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBAYDL34Z7J6L) or [cryptocurrency](https://pastebin.com/raw/M2JJpQpC). Thanks!
+### MAC OS X client => Tunnelblick
+### Android Phone client => Openvpn for Android
+### iOS Phone client => Openvpn for Android
+### Windows PC => Openvpn for Android
+### Linux Distro: install openvpn package, run as root : openvpn --config xxx.ovpn
+
+#### Forked from Nyr/openvpn-install
