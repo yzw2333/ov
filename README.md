@@ -12,7 +12,7 @@ yum install git -y<br>
 git clone https://github.com/abbrous/openvpn-install
 
 ## Change into directory, switch to root account, add executable permission
-cd openvpn-install<br>
+cd ov<br>
 chmod a+x openvpn-install.sh<br>
 ./openvpn-install.sh<br>
 
@@ -23,10 +23,10 @@ python -m SimpleHTTPServer 9090<br>
 
 ## Download xxx.ovpn file, and import to you client
 
-MAC OS X client => Tunnelblick<br>
+MACOS client => Tunnelblick<br>
 Android Phone client => Openvpn for Android<br>
-iOS Phone client => Openvpn for Android<br>
-Windows PC => Openvpn for Android<br>
+iOS Phone client => Openvpn from AppleStore<br>
+Windows PC => Openvpn for Windows<br>
 Linux Distro: install openvpn package, run as root : openvpn --config xxx.ovpn<br>
 
 Forked from Nyr/openvpn-install . 
