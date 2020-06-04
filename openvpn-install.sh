@@ -35,6 +35,8 @@ You need to enable TUN before running this script"
 	exit 4
 fi
 
+setenforce 0
+
 if [[ -e /etc/debian_version ]]; then
 	OS=debian
 	GROUPNAME=nogroup
@@ -254,3 +256,6 @@ verb 3" > /etc/openvpn/client-common.txt
 	echo "Your client configuration is available at:" $ovdirglobal/"$CLIENT.ovpn"
 	echo "If you want to add more clients, you simply need to run this script again!"
 fi
+
+# restart openvpn server
+systemctl restart openvpn@server
