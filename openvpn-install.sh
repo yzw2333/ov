@@ -81,15 +81,6 @@ if [[ -e /etc/openvpn/server.conf ]]; then
 	echo "Client $CLIENT added, configuration is available at:" $ovdirglobal/"$CLIENT.ovpn"
 	exit
 else
-	clear
-	echo 'Welcome to this OpenVPN "road warrior" installer!'
-	echo
-	# OpenVPN setup and first user creation
-	echo "I need to ask you a few questions before starting the setup."
-	echo "You can leave the default options and just press enter if you are ok with them."
-	echo
-	echo "First, provide the IPv4 address of the network interface you want OpenVPN"
-	echo "listening to."
 	# Autodetect IP address and pre-fill for the user
 	IP=$(ip addr | grep 'inet' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | grep -oE '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -1)
 	read -p "IP address: " -e -i $IP IP
