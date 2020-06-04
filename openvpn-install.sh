@@ -96,11 +96,11 @@ else
 	CLIENT=$1
 	if [[ "$OS" = 'debian' ]]; then
 		apt-get update
-		apt-get install openvpn iptables openssl ca-certificates -y
+		apt-get install wget openvpn iptables openssl ca-certificates -y
 	else
 		# Else, the distro is CentOS
 		yum install epel-release -y
-		yum install openvpn iptables openssl ca-certificates -y
+		yum install wget openvpn iptables openssl ca-certificates -y
 	fi
 	# Get easy-rsa
 	EASYRSAURL='https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.6/EasyRSA-unix-v3.0.6.tgz'
