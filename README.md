@@ -12,10 +12,10 @@ git clone https://github.com/abbrous/ov
 
 ## Change into directory, switch to root account, add executable permission
 cd ov<br>
-chmod +x openvpn-install.sh
+chmod +x openvpn-install.sh<br>
 ### switch to root user
-sudo su
-openvpn-install.sh client_username
+sudo su<br>
+openvpn-install.sh client_username<br>
 
 ## Stop firewall, or permit port 9090(anything you want), e.g systemctl stop firewalld
 ## Serve xxx.ovpn file, open your browser and download
