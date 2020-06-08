@@ -1,33 +1,20 @@
+## Switch to root user, then run the following one-line command
 
-## OS: Ubuntu Centos Debian
+Centos:
+yum install git -y && cd && git clone https://github.com/abbrous/ov && cd ov && ./openvpn-install.sh hk_xiaoming
 
-## Install git
-apt install git -y<br>
+Ubuntu/Debian:
+apt install git -y && cd && git clone https://github.com/abbrous/ov && cd ov && ./openvpn-install.sh hk_xiaoming
 
-yum install git -y<br>
-
-
-## Clone this bash script
-git clone https://github.com/abbrous/ov
-
-## Change into directory, switch to root account, add executable permission
-cd ov<br>
-chmod +x openvpn-install.sh<br>
-### switch to root user
-sudo su<br>
-openvpn-install.sh client_username<br>
-
-## Stop firewall, or permit port 9090(anything you want), e.g systemctl stop firewalld
-## Serve xxx.ovpn file, open your browser and download
-python -m SimpleHTTPServer 9090<br>
+## 新增新用户，给张三产生客户端文件示例，用户名前面可以加上地理位置，方便标记 例如香港 hk_ 美国usa_ 日本东京 tokyo_
+./openvpn-install zhangsan
 
 
 ## Download xxx.ovpn file, and import to you client
-
 MACOS client => Tunnelblick<br>
 Android Phone client => Openvpn for Android<br>
 iOS Phone client => Openvpn from Apple App Store<br>
-Windows PC => Openvpn for Windows<br>
+Windows PC => Openvpn Client for Windows<br>
 Linux Distro: install openvpn package, run as root : openvpn --config xxx.ovpn<br>
 
 Forked from Nyr/openvpn-install . 
