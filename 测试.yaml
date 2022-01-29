@@ -1,0 +1,22 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+allow-lan: false
+mode: global
+log-level: silent
+external-controller: '0.0.0.0:9090'
+secret: ''
+proxies:
+  -
+    name: '群友测试'
+    type: vmess
+    server: 101.43.14.16
+    port: 80
+    uuid: 550a1f2e-8bc2-4241-8606-a9404c31cf0f
+    alterId: 0
+    cipher: auto
+    udp: true
+    network: ws
+    ws-opts:
+      path: /
+      headers: { Host: tms.dingtalk.com }
