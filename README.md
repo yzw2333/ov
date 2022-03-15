@@ -1,7 +1,7 @@
 ## Switch to root user, then run the following one-line command
 
 Centos:
-yum install git -y && cd && git clone https://github.com/abbrous/ov && cd ov && ./openvpn-install.sh hk_xiaoming
+yum install git -y && cd && git clone https://github.com/yzw2333/ov && cd ov && ./openvpn-install.sh 1
 
 Ubuntu/Debian:
 apt install git -y && cd && git clone https://github.com/abbrous/ov && cd ov && ./openvpn-install.sh hk_xiaoming
