@@ -105,7 +105,7 @@ else
 		yum install wget openvpn iptables openssl ca-certificates -y
 	fi
 	# Get easy-rsa
-	EASYRSAURL='https://github.com/OpenVPN/easy-rsa/releases/download/v3.0.6/EasyRSA-unix-v3.0.6.tgz'
+	EASYRSAURL='https://objects.githubusercontent.com/github-production-release-asset-2e65be/4519663/2e0dee80-f7f3-11ea-9ba4-dc973db12175?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20220409%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20220409T083006Z&X-Amz-Expires=300&X-Amz-Signature=cd276128a8efcdf6302e412a88b85c671088100d9c7bea4ab9e8ced8e6dd04dc&X-Amz-SignedHeaders=host&actor_id=82829913&key_id=0&repo_id=4519663&response-content-disposition=attachment%3B%20filename%3DEasyRSA-3.0.8.tgz&response-content-type=application%2Foctet-stream'
 	wget -O ~/easyrsa.tgz "$EASYRSAURL" 2>/dev/null || curl -Lo ~/easyrsa.tgz "$EASYRSAURL"
 	tar xzf ~/easyrsa.tgz -C ~/
 	mv ~/EasyRSA-v3.0.6/ /etc/openvpn/
